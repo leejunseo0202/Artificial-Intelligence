@@ -31,3 +31,24 @@ Ex) [2048, 7, 7]에서 평균을 구해 -> [2048, 1, 1]로 변환
 Convolution/Pooling 프로세스의 결과를 통해 Classification 한다.
 
 ![ResNetImage04](https://github.com/user-attachments/assets/75bf823a-94a7-46bd-a845-1c728350644c)
+
+
+
+
+
+
+# 학습 과정
+## 1. 기울기 초기화
+optimizer.zero_grad()
+
+## 2. Forward Propagation (예측)
+outputs = model(inputs)
+
+## 3. Loss 계산 (정답과 비교)
+loss = criterion(outputs, labels)
+
+## 4단계: Backward (역전파)
+loss.backward()
+
+## 5단계: 가중치 업데이트
+optimizer.step()
